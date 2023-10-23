@@ -15,7 +15,8 @@ import java.util.Date;
 @ToString
 @RequiredArgsConstructor
 @NoArgsConstructor
-
+@AllArgsConstructor
+@Builder
 public class CommentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

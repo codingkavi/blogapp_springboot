@@ -14,7 +14,8 @@ import java.util.Date;
 @ToString
 @RequiredArgsConstructor
 @NoArgsConstructor
-
+@AllArgsConstructor
+@Builder
 public class ArticleEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

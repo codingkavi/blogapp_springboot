@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.scaler.blogapp.users.UsersRepositoryTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-23T14:03:38" hostname="MacBook-Air.local" time="0.33">
+<testsuite name="com.scaler.blogapp.users.UsersRepositoryTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-23T14:09:32" hostname="MacBook-Air.local" time="0.361">
   <properties/>
-  <testcase name="can_create_users()" classname="com.scaler.blogapp.users.UsersRepositoryTests" time="0.33"/>
-  <system-out><![CDATA[10:03:36.933 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.scaler.blogapp.users.UsersRepositoryTests]: UsersRepositoryTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-10:03:37.031 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.scaler.blogapp.BlogappSpringbootApplication for test class com.scaler.blogapp.users.UsersRepositoryTests
+  <testcase name="can_find_users()" classname="com.scaler.blogapp.users.UsersRepositoryTests" time="0.361"/>
+  <system-out><![CDATA[10:09:31.027 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.scaler.blogapp.users.UsersRepositoryTests]: UsersRepositoryTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:09:31.090 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.scaler.blogapp.BlogappSpringbootApplication for test class com.scaler.blogapp.users.UsersRepositoryTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,17 +13,17 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.5)
 
-2023-10-23T10:03:37.257-04:00  INFO 93599 --- [    Test worker] c.s.blogapp.users.UsersRepositoryTests   : Starting UsersRepositoryTests using Java 17.0.2 with PID 93599 (started by kavi in /Users/kavi/Downloads/blogapp_springboot)
-2023-10-23T10:03:37.257-04:00  INFO 93599 --- [    Test worker] c.s.blogapp.users.UsersRepositoryTests   : The following 1 profile is active: "test"
-2023-10-23T10:03:37.413-04:00  INFO 93599 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-10-23T10:03:37.438-04:00  INFO 93599 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 3 JPA repository interfaces.
-2023-10-23T10:03:37.459-04:00  INFO 93599 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
-2023-10-23T10:03:37.526-04:00  INFO 93599 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:e8fb43c8-7adb-4d89-9f6a-a826a16dd151;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
-2023-10-23T10:03:37.798-04:00  INFO 93599 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-10-23T10:03:37.837-04:00  INFO 93599 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
-2023-10-23T10:03:37.838-04:00  INFO 93599 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2023-10-23T10:03:37.960-04:00  INFO 93599 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2023-10-23T10:03:38.348-04:00  INFO 93599 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-10-23T10:09:31.317-04:00  INFO 93719 --- [    Test worker] c.s.blogapp.users.UsersRepositoryTests   : Starting UsersRepositoryTests using Java 17.0.2 with PID 93719 (started by kavi in /Users/kavi/Downloads/blogapp_springboot)
+2023-10-23T10:09:31.318-04:00  INFO 93719 --- [    Test worker] c.s.blogapp.users.UsersRepositoryTests   : The following 1 profile is active: "test"
+2023-10-23T10:09:31.452-04:00  INFO 93719 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-23T10:09:31.476-04:00  INFO 93719 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 3 JPA repository interfaces.
+2023-10-23T10:09:31.497-04:00  INFO 93719 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2023-10-23T10:09:31.559-04:00  INFO 93719 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:db3dab53-aa77-492e-976e-93d0d9a5b48a;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2023-10-23T10:09:31.679-04:00  INFO 93719 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-23T10:09:31.699-04:00  INFO 93719 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-10-23T10:09:31.701-04:00  INFO 93719 --- [    Test worker] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-10-23T10:09:31.818-04:00  INFO 93719 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-10-23T10:09:32.379-04:00  INFO 93719 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 Hibernate: drop table if exists article_entity cascade 
 Hibernate: drop table if exists comment_entity cascade 
 Hibernate: drop table if exists users cascade 
@@ -39,9 +39,11 @@ Hibernate: create table users (id bigint not null, bio varchar(255), email varch
 Hibernate: alter table if exists article_entity add constraint FKc6e08vf26k22c5olv2ffflerr foreign key (author_id) references users
 Hibernate: alter table if exists comment_entity add constraint FKt45bktatp5729k1vkmuptml1v foreign key (article_id) references article_entity
 Hibernate: alter table if exists comment_entity add constraint FKk9hhyund0ohqcvots98wr20wh foreign key (author_id) references users
-2023-10-23T10:03:38.371-04:00  INFO 93599 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-10-23T10:03:38.530-04:00  INFO 93599 --- [    Test worker] c.s.blogapp.users.UsersRepositoryTests   : Started UsersRepositoryTests in 1.455 seconds (process running for 2.323)
+2023-10-23T10:09:32.399-04:00  INFO 93719 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-23T10:09:32.550-04:00  INFO 93719 --- [    Test worker] c.s.blogapp.users.UsersRepositoryTests   : Started UsersRepositoryTests in 1.427 seconds (process running for 1.89)
 Hibernate: select next value for users_seq
+Hibernate: insert into users (bio,email,image,username,id) values (?,?,?,?,?)
+Hibernate: select u1_0.id,u1_0.bio,u1_0.email,u1_0.image,u1_0.username from users u1_0
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
