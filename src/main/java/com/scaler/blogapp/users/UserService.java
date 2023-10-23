@@ -18,7 +18,7 @@ public class UserService {
     public UserEntity createUser(CreateUserRequest u) {
         var newUser = UserEntity.builder()
                 .username(u.getUsername())
- //               .password(password) //TODO encrypt password
+       //       .password(u.getPassword())
                 .email(u.getEmail())
                 .build();
 
