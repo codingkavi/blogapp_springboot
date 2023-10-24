@@ -34,7 +34,7 @@ public class UserService {
         return usersRepository.findByUsername(username).orElseThrow(() -> new UserNotFoundException(username));
     }
 
-    public UserEntity loginUser(String username, String password) throws InvalidCredentialException {
+    public UserEntity loginUser(String username, String password) {
         var user = usersRepository.findByUsername(username).orElseThrow(() -> new UserNotFoundException(username));
         var passMatch = passwordEncoder.matches(password,user.getPassword());
         if(!passMatch) {
@@ -53,7 +53,7 @@ public class UserService {
         }
     }
 
-    public static class InvalidCredentialException extends IllegalAccessException {
+    public static class InvalidCredentialException extends IllegalArgumentException {
         public InvalidCredentialException() {
             super("Invalid username or password combination");
         }

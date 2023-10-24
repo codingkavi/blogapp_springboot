@@ -2,6 +2,7 @@ package com.scaler.blogapp.security;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.JWTDecodeException;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -18,5 +19,11 @@ public class JWTService {
                 .withIssuedAt(new Date())
                 //.withExpiresAt()
                 .sign(algorithm);
+    }
+
+    public Long retrieveUserId(String jwtString) {
+        var decodedJWT = JWT.decode(jwtString);
+        var userId = Long.valueOf(decodedJWT.getSubject());
+        return userId;
     }
 }
