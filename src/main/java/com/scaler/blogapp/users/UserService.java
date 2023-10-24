@@ -2,6 +2,8 @@ package com.scaler.blogapp.users;
 
 
 import com.scaler.blogapp.users.dtos.CreateUserRequest;
+import org.modelmapper.ModelMapper;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 
@@ -10,18 +12,18 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     private final UsersRepository usersRepository;
+    private final ModelMapper modelMapper;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserService(UsersRepository usersRepository) {
+    public UserService(UsersRepository usersRepository, ModelMapper modelMapper, PasswordEncoder passwordEncoder) {
         this.usersRepository = usersRepository;
+        this.modelMapper = modelMapper;
+        this.passwordEncoder = passwordEncoder;
     }
 
     public UserEntity createUser(CreateUserRequest u) {
-        var newUser = UserEntity.builder()
-                .username(u.getUsername())
-       //       .password(u.getPassword())
-                .email(u.getEmail())
-                .build();
-
+        var newUser = modelMapper.map(u,UserEntity.class);
+        newUser.setPassword(passwordEncoder.encode(u.getPassword()));
         return usersRepository.save(newUser);
     }
 
