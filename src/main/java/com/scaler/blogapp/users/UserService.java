@@ -4,7 +4,7 @@ package com.scaler.blogapp.users;
 import com.scaler.blogapp.users.dtos.CreateUserRequest;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+
 
 @Service
 public class UserService {
