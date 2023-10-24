@@ -33,7 +33,7 @@ public class UsersController {
 
 
     @PostMapping("/login")
-    public ResponseEntity<UserResponse> loginUser(@RequestBody LoginUserRequest request) {
+    public ResponseEntity<UserResponse> loginUser(@RequestBody LoginUserRequest request) throws UserService.InvalidCredentialException {
        UserEntity savedUser = userService.loginUser(request.getUsername(), request.getPassword());
        return ResponseEntity.ok(modelMapper.map(savedUser,UserResponse.class));
     }

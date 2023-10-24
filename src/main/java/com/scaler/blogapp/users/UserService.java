@@ -34,10 +34,12 @@ public class UserService {
         return usersRepository.findByUsername(username).orElseThrow(() -> new UserNotFoundException(username));
     }
 
-    public UserEntity loginUser(String username, String password) {
+    public UserEntity loginUser(String username, String password) throws InvalidCredentialException {
         var user = usersRepository.findByUsername(username).orElseThrow(() -> new UserNotFoundException(username));
-
-        //TODO match password
+        var passMatch = passwordEncoder.matches(password,user.getPassword());
+        if(!passMatch) {
+            throw new InvalidCredentialException();
+        }
         return user;
     }
 
@@ -48,6 +50,12 @@ public class UserService {
 
         public UserNotFoundException(Long  userId) {
             super("User with id " + userId + "not found");
+        }
+    }
+
+    public static class InvalidCredentialException extends IllegalAccessException {
+        public InvalidCredentialException() {
+            super("Invalid username or password combination");
         }
     }
 }
